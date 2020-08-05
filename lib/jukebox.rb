@@ -47,9 +47,10 @@ def exit_jukebox
 end 
 
 def run(records)
+  input = ''
+  until input == "exit"
   puts "Please enter a command:"
   input = gets.strip
-  until input == "exit"
   case input 
   when "list"
     list(records)
