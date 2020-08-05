@@ -26,7 +26,7 @@ def play(records)
   #binding.pry
   if input.to_i <= records.length 
     puts "Playing #{records[input.to_i-1]}"
-  elsif records.each{|song| song == input}
+  elsif records.find{|song| song == input}
     puts "Playing #{input}"
   else  
     puts "Invalid input, please try again"
