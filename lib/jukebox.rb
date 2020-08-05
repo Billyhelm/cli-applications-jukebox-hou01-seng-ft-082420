@@ -18,12 +18,21 @@ def help
   puts "- exit : exits this program"
 end 
 
-def play 
-  
+def play(records)
+  puts "Please enter a song name or number:"
+  input = gets.strip
+  if input.to_i <= records.length 
+    puts "Playing #{records[input-1]}"
+    return
+  end # if
+   records.each{|song| song == input, p "Playing #{song}"}
+  puts "Invalid input, please try again"
 end 
 
-def list 
-  
+def list(records)
+  records.each_with_index do |song, index|
+    puts "#{index+1}. #{song}"
+  end 
 end 
 
 def exit_jekbox
