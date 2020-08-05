@@ -1,3 +1,5 @@
+require 'pry'
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -21,6 +23,7 @@ end
 def play(records)
   puts "Please enter a song name or number:"
   input = gets.strip
+  binding.pry
   if input.to_i <= records.length 
     puts "Playing #{records[input-1]}"
   elsif records.each{|song| song == input}
@@ -29,6 +32,7 @@ def play(records)
     puts "Invalid input, please try again"
   end 
 end 
+play(songs)
 
 def list(records)
   records.each_with_index do |song, index|
