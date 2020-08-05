@@ -25,7 +25,7 @@ def play(records)
   input = gets.strip
   #binding.pry
   if input.to_i <= records.length 
-    puts "Playing #{records[input-1]}"
+    puts "Playing #{records[input.to_i-1]}"
   elsif records.each{|song| song == input}
     puts "Playing #{input}"
   else  
