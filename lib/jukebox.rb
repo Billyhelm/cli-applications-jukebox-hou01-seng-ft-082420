@@ -30,7 +30,11 @@ def play(records)
   else
     new_song = records.find{|song| song == input}
     binding.pry
-    #new_song  ? puts "Playing #{new_song}" : puts "Invalid input, please try again"
+    if new_song 
+      puts "Playing #{new_song}"  
+    else 
+      puts "Invalid input, please try again"
+    end 
   end 
 end 
 
