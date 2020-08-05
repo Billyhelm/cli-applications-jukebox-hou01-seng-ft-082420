@@ -35,7 +35,6 @@ def play(records)
   end 
 end 
 
-play(songs)
 
 def list(records)
   records.each_with_index do |song, index|
