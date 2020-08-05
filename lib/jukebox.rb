@@ -26,12 +26,12 @@ def play(records)
   #binding.pry
   if input.to_i <= records.length 
     puts "Playing #{records[input.to_i-1]}"
-  elsif records.find{|song| song == input} == true
-    puts "Playing #{input}"
-  else  
-    puts "Invalid input, please try again"
+  else
+    new_song = records.find{|song| song == input}
+    new_song ? puts "Playing #{new_song}" : puts "Invalid input, please try again"
   end 
 end 
+
 play(songs)
 
 def list(records)
