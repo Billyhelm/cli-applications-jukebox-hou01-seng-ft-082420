@@ -52,8 +52,13 @@ def run(records)
   until input == "exit"
   case input 
   when "list"
-    list
-  end
+    list(records)
+  when "help"
+    help 
+  when "play"
+    play(records)
+  end #case 
+  end #until 
   exit_jukebox
 end
 
