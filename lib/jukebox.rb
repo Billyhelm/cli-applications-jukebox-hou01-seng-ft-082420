@@ -29,7 +29,7 @@ def play(records)
     puts "Playing #{records[input.to_i-1]}"
   else
     new_song = records.find{|song| song == input}
-    #new_song  ? puts "Playing #{new_song}" : puts "Invalid input, please try again"
+    new_song  ? puts "Playing #{new_song}" : puts "Invalid input, please try again"
   end 
 end 
 
