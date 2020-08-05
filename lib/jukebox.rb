@@ -23,14 +23,11 @@ def play(records)
   input = gets.strip
   if input.to_i <= records.length 
     puts "Playing #{records[input-1]}"
-    return
-  end # if
-  records.each do |song| 
-    if song == input 
-      p "Playing #{song}"
-    end 
+  elsif records.each{|song| song = input}
+    puts "Playing #{input}"
+  else  
+    puts "Invalid input, please try again"
   end 
-  puts "Invalid input, please try again"
 end 
 
 def list(records)
