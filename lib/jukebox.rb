@@ -42,13 +42,18 @@ def list(records)
   end 
 end 
 
-def exit_jekbox
+def exit_jukebox
   puts "Goodbye"
 end 
 
-def run 
+def run(records)
   puts "Please enter a command:"
   input = gets.strip
-  
+  until input == "exit"
+  case input 
+  when "list"
+    list
+  end
+  exit_jukebox
 end
 
