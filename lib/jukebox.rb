@@ -24,7 +24,7 @@ def play(records)
   puts "Please enter a song name or number:"
   input = gets.strip
   #binding.pry
-  if input.to_i <= records.length 
+  if input.to_i <= records.length && input.to_i > 0
     binding.pry
     puts "Playing #{records[input.to_i-1]}"
   else
