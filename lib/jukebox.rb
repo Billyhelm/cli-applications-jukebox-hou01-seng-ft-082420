@@ -25,7 +25,7 @@ def play(records)
     puts "Playing #{records[input-1]}"
     return
   end # if
-   records.each{|song| song == input ? p "Playing #{song}"}
+   records.each{|song| song == input ? p "Playing #{song}" : nil}
   puts "Invalid input, please try again"
 end 
 
