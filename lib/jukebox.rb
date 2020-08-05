@@ -23,7 +23,7 @@ def play(records)
   input = gets.strip
   if input.to_i <= records.length 
     puts "Playing #{records[input-1]}"
-  elsif records.each{|song| song = input}
+  elsif records.each{|song| song == input}
     puts "Playing #{input}"
   else  
     puts "Invalid input, please try again"
