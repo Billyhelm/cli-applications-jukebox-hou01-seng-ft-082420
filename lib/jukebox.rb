@@ -23,7 +23,7 @@ end
 def play(records)
   puts "Please enter a song name or number:"
   input = gets.strip
-  binding.pry
+  #binding.pry
   if input.to_i <= records.length 
     puts "Playing #{records[input-1]}"
   elsif records.each{|song| song == input}
