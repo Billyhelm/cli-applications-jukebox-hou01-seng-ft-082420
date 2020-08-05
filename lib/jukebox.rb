@@ -43,10 +43,12 @@ def list(records)
 end 
 
 def exit_jekbox
-  
+  puts "Goodbye"
 end 
 
 def run 
+  puts "Please enter a command:"
+  input = gets.strip
   
 end
 
