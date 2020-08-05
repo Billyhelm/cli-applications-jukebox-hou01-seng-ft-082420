@@ -25,6 +25,7 @@ def play(records)
   input = gets.strip
   #binding.pry
   if input.to_i <= records.length 
+    binding.pry
     puts "Playing #{records[input.to_i-1]}"
   else
     new_song = records.find{|song| song == input}
